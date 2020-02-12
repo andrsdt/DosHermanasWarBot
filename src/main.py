@@ -28,8 +28,8 @@ while len(dicc_descendente)>=0:
     (ganador, perdedor), dicc_descendente = decision_ganador_perdedor()
     
     # Estas dos funciones sirven para transformar el barrio en hashtag: Ciudad Blanca --> #CiudadBlanca
-    gatoganador = '#'+ (ganador.strip()).replace(' ','')
-    gatoperdedor = '#'+ (perdedor.strip()).replace(' ','')
+    tagganador = '#'+ (ganador.strip()).replace(' ','')
+    tagperdedor = '#'+ (perdedor.strip()).replace(' ','')
     
     # En el tweet se utilizará una frase personalizada en el caso de que la haya para dicho barrio
     perdedor_mod = filtros_personalizados_perdedor(perdedor)
@@ -41,8 +41,8 @@ while len(dicc_descendente)>=0:
                                                                     random.choice(mod_conquista),
                                                                     perdedor_mod.split('\n')[0], 
                                                                     len(dicc_descendente),
-                                                                    gatoganador,
-                                                                    gatoperdedor))
+                                                                    tagganador,
+                                                                    tagperdedor))
 
         tachar_barrio(perdedor)
         # print(tweet)
@@ -60,8 +60,8 @@ while len(dicc_descendente)>=0:
                                                                         perdedor_mod.split('\n')[0], 
                                                                         ganador.split('\n')[0], 
                                                                         ''.join(barrio_restante).split('\n')[0],
-                                                                        gatoganador,
-                                                                        gatoperdedor))
+                                                                        tagganador,
+                                                                        tagperdedor))
 
         tachar_barrio(perdedor)
         # print(tweet)
